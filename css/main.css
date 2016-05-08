@@ -1,0 +1,235 @@
+* {
+  transition: all 0.25s ease-in-out;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #37385F;
+  color: #D7D7EF;
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin: 50px 0 15px;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+h3 {
+  margin: 30px auto 0;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+.ft-container {
+  transition: none;
+}
+
+.ft-container * {
+  transition: none;
+}
+
+.file-drop-area {
+  border: 1px dashed #7c7db3;
+  border-radius: 3px;
+  position: relative;
+  width: 450px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 26px 20px 30px;
+  position: relative;
+}
+
+.file-drop-area.is-active {
+  background-color: #3F4069;
+}
+
+.file-drop-area.uploaded {
+  border-style: solid;
+  text-align: center;
+}
+
+.file-drop-area.uploaded .fake-btn,
+.file-drop-area.uploaded .file-msg,
+.file-drop-area.uploaded #file-input {
+  display: none;
+}
+
+.file-drop-area.uploaded #image,
+.file-drop-area.uploaded #user-img {
+  display: inline-block;
+}
+
+.file-drop-area.uploaded .crop-options {
+  display: block;
+  margin-top: 15px;
+}
+
+.file-drop-area .fake-btn {
+  display: block;
+  height: 34px;
+  margin: auto;
+  padding: 8px 15px;
+  background-color: #3F4069;
+  border: 1px solid #9E9EC4;
+  border-radius: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+}
+
+.file-drop-area .fake-btn:hover {
+  background-color: #53558f;
+}
+
+.file-drop-area .file-msg {
+  font-size: small;
+  font-weight: 300;
+}
+
+.file-drop-area #file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.file-drop-area #file-input:focus {
+  outline: none;
+}
+
+.file-drop-area #image,
+.file-drop-area #user-img {
+  display: none;
+  width: 200px;
+  height: 200px;
+}
+
+.file-drop-area .crop-options {
+  display: none;
+}
+
+.file-drop-area .crop-options .input-group {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.file-drop-area .crop-options .input-group:last-of-type {
+  margin-right: 0;
+}
+
+#btn-save {
+  display: block;
+  width: 300px;
+  margin: 15px auto;
+  padding: 15px 50px;
+  background-color: #696aa5;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+
+#btn-save:hover {
+  background-color: #303050;
+}
+
+.accessories {
+  width: 450px;
+  margin: 60px auto 30px;
+  position: relative;
+}
+
+.accessories ul {
+  display: block;
+  padding: 10px;
+  list-style: none;
+  background-color: #4a4b7f;
+  border: 1px solid #7c7db3;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.accessories ul li {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  margin: 5px;
+}
+
+.accessories ul li img {
+  max-width: 70px;
+}
+
+.ft-container {
+  position: absolute;
+  -ms-user-select: none;
+      user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+}
+
+.ft-controls {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ft-scaler {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  margin-top: -4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.ft-scaler-top {
+  top: 0%;
+}
+
+.ft-scaler-mid {
+  top: 50%;
+}
+
+.ft-scaler-bottom {
+  top: 100%;
+}
+
+.ft-scaler-left {
+  left: 0%;
+}
+
+.ft-scaler-center {
+  left: 50%;
+}
+
+.ft-scaler-right {
+  left: 100%;
+}
+
+.ft-bounds {
+  position: absolute;
+  border: 1px dashed #ccc;
+}
+
+.ft-rotator {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/rotate.png");
+}
