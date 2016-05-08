@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+  <link rel="stylesheet" media="all" href="css/style.css">
+  <link rel="stylesheet" media="all" href="css/main.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+  <script id="imageTemplate" type="text/x-jquery-tmpl">
+    <div class="imageholder">
+    <img class="crop" src="${filePath}" alt="${fileName}"/>
+    </div>
+  </script>
+  <script src="js/script.js"></script>
+</head>
+<!-- Header-->
+<header id="header">
+  <div class="clearfix"></div>
+</header>
+<!-- Content-->
+<section id="wrapper">
+  <div id="droparea">
+    <div class="dropareainner">
+      <p class="dropfiletext">Drop files here</p>
+      <p>or</p>
+      <p>
+        <input id="uploadbtn" type="button" value="Select Files" class="uploadbtn">
+      </p>
+      <p class="extra">
+        <input id="nocrop" type="radio" name="croping" value="nocrop" checked="">
+        <label for="nocrop">No Crop</label>
+        <input id="crop" type="radio" name="croping" value="crop">
+        <label for="crop">Crop Image (200x200)</label>
+      </p>
+      <p id="err">Wait there! You must ENABLE Javascript to have this work!</p>
+    </div>
+    <input id="upload" type="file" multiple="">
+  </div>
+  <p class="message">Images are <strong>NOT</strong> saved on the server.</p>
+  <h1>upload an image and click on an accessory to add to it, you can drag, resize,rotate and save!</h1>
+  <div id="result"> </div>
+</section>
+<input id="btnSave" type="button" value="Save Image" class="myButton">
+<!-- Footer-->
+<footer id="footer"></footer>

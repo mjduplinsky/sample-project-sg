@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Document
+  link(rel="stylesheet", href="css/main.css")
+  link(href='https://fonts.googleapis.com/css?family=Lato:400,700,300,100', rel='stylesheet', type='text/css')
+  script(src='js/jquery-2.2.0.min.js')
+  script(src='http://greenethumb.com/github/jquery-free-transform/js/Matrix.js')
+  script(src='http://greenethumb.com/github/jquery-free-transform/js/jquery.freetrans.js')
+  script(src='js/script.js')
+body
+  
+  h2 Upload profile image
+  .file-drop-area
+    span.file-msg.js-set-number Drag and drop files here or
+    span.fake-btn Browse
+    input#file-input(type='file')
+    //- img#image(src='', alt='Uploaded image')
+
+    canvas#user-img(width='200', height='200')
+    
+    .crop-options
+      .input-group
+        input#nocrop(type="radio", name="crop", value="nocrop", checked='')
+        label(for="nocrop") No crop
+
+      .input-group
+        input#croped(type="radio", name="crop", value="croped")
+        label(for="croped") Crop image (200x200)
+
+  .accessories
+    h3 Add accessories to your photo
+    ul
+      li.trans
+        img(src="images/overlay1.png", alt="")
+      li
+        img(src="images/glasses.png", alt="")
+      li.trans
+        img(src="images/overlay2.png", alt="")
+      li
+        img(src="images/hat.png", alt="")
+      li
+        img(src="images/overlay3.png", alt="")
+
+  
+  a#btn-save(href="#", download="profile-picture.png") Save image
+
+
+  script
+    $(document).ready(function() {
+    $('.trans').freetrans();
+    });
